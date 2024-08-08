@@ -444,14 +444,14 @@ body {
 }
 
 .opciones-content button:first-child{
-    background-color: #e5a00d;
+    background-color: #e5ab0d;
     border: none;
     border-radius: 3px;
     color: rgb(36, 35, 35);
 }
 
 .opciones-content button:first-child:hover{
-    background-color: #f7b017;
+    background-color: #ffe815;
 }
 
 .opciones-content button .button{
