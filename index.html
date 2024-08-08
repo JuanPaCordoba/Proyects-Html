@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <main class="principal">
+        <div class="container">
+            <header>
+                <nav>
+                    <div class="leftnav">
+                        <i class="fas fa-bars"></i>
+                        <img src="image.png" alt="">
+                        <div class="icon">
+                            <input type="text">
+                            <i class="fas fa-search icon"></i>
+                        </div>
+                    </div>
+                    <div class="rigtnav">
+                        <button>Hazte Premium</button>
+                        <div class="rigth">
+                            <div class="img">
+                                <img src="resorces/setting.png" alt="">
+                                <img src="resorces/reproductor.png" alt="">
+                            </div>
+                            <div class="perfil">
+                                <span>1</span>
+                            </div>
+                            <img src="resorces/image.png" alt="">
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+
+        </div>
+        <div class="container-body">
+            <sidebar class="sidebar">
+                <ul>
+                    <li><a href=""><i class="fas fa-home"></i>Inicio</a></li>
+                    <li><a href=""><i class="fas fa-vote-yea"></i>Watchlist</a></li>
+                    <li><a href=""><i class="fas fa-tv"></i>Tv en directo</a></li>
+                    <li><a href=""><i class="fas fa-film"></i>Peliculas y programas</a></li>
+                    <li><a href=""><i class="far fa-compass"></i>Discover</a></li>
+                    <li><a href=""><i class="fas fa-music"></i>Música</a></li>
+                    <li><a href=""><i class="fas fa-plus"></i>Tu contenido</a></li>
+                </ul>
+            </sidebar>
+
+            <div class="content">
+                <nav class="nav">
+                    <div class="nav-left">
+                        <h5>Discover</h5>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                    <div class="nav-right">
+                        <i class="far fa-images"></i>
+                        <div class="center-nav">
+                            <i class="fas fa-grip-lines"></i>
+                            <i class="fas fa-th"></i>
+                        </div>
+                        <div class="filter-menu">
+                            <i class="fas fa-chevron-left"></i>
+                            <div class="bars-menu">
+                                <i class="fas fa-bars"></i>
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </nav>
+
+
+                <div class="body-content">
+                    <div class="encabezado-body">
+                        <div class="image">
+                            <img src="../derek/img/image.png" alt="">
+                        </div>
+                        <div class="body-encabezado-content">
+                            <a href="">Betty la fea, la historia continúa</a>
+                            <h5>Tu cárcel</h5>
+                            <div class="description">
+                                <div class="description-cap">
+                                    <a href="">Season 1</a>
+                                    <p>Episodio 5</p>
+                                </div>
+                                <div class="description-date">
+                                    <p>August 2, 2024 </p>
+                                    <p>35min</p>
+                                    <p>TV-14</p>
+                                </div>
+                                <div class="rating-wrapper">
+                                    <div class="rating-star">
+                                        <input type="radio" name="html">
+                                        <input type="radio" name="html">
+                                        <input type="radio" name="html">
+                                        <input type="radio" name="html">
+                                        <input type="radio" name="html">
+                                        <input type="radio" name="html">
+                                        <input type="radio" name="html">
+                                        <input type="radio" name="html">
+                                        <input type="radio" name="html">
+                                        <input type="radio" name="html">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="opciones-content">
+                                <button>
+                                    <div class="button">
+                                        <i class="fas fa-eject"></i>
+                                        <span>Eliminar programa de la lista de seguimiento</span>
+                                    </div>
+                                </button>
+                                <button><i class="far fa-check-circle"></i></button>
+                                <button><i class="far fa-share-square"></i></button>
+                            </div>
+
+                            <div class="parrafo">
+                                <p>La junta directiva de Ecomoda se reúne y todos se niegan a pagar la fianza de Armando. Se descubre el espionaje en contra de Ecomoda pero Nacho logra inculpar a Armando. Presionada por todo, Mila se mete en problemas con la policía y Betty acude a la cárcel a pedirle explicaciones a Armando. Pero el reclamo se convierte en algo más.</p>
+                            
+                            </div>
+                            <div class="parrafo-mas">
+                                <span id="hidden-text">Más </span><i class="fas fa-arrows-alt-v"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+    <script>
+        const btn = document.getElementById('hidden-text');
+        const text  = document.querySelector('.parrafo');
+
+        btn.addEventListener('click', () => {
+            if(text.classList.contains('parrafo-completo')){
+                text.classList.remove('parrafo-completo');
+                btn.textContent = 'Más';
+            }else{
+                text.classList.add('parrafo-completo');
+                btn.textContent = 'Menos';
+            }
+        });
+
+    </script>
+</body>
+
+</html>
