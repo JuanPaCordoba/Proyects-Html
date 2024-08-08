@@ -450,6 +450,10 @@ body {
     color: rgb(36, 35, 35);
 }
 
+.opciones-content button:first-child:hover{
+    background-color: #f7b017;
+}
+
 .opciones-content button .button{
     width: 350px;
     display: flex;
