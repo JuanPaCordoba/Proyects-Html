@@ -17,7 +17,7 @@
             <header>
                 <nav>
                     <div class="leftnav">
-                        <i class="fas fa-bars"></i>
+                        <i id="icon-menu" class="fas fa-bars"></i>
                         <img src="image.png" alt="">
                         <div class="icon">
                             <input type="text">
@@ -45,13 +45,13 @@
         <div class="container-body">
             <sidebar class="sidebar">
                 <ul>
-                    <li><a href=""><i class="fas fa-home"></i>Inicio</a></li>
-                    <li><a href=""><i class="fas fa-vote-yea"></i>Watchlist</a></li>
-                    <li><a href=""><i class="fas fa-tv"></i>Tv en directo</a></li>
-                    <li><a href=""><i class="fas fa-film"></i>Peliculas y programas</a></li>
-                    <li><a href=""><i class="far fa-compass"></i>Discover</a></li>
-                    <li><a href=""><i class="fas fa-music"></i>Música</a></li>
-                    <li><a href=""><i class="fas fa-plus"></i>Tu contenido</a></li>
+                    <li><a href=""><i class="fas fa-home"></i><span>Inicio</span></a></li>
+                    <li><a href=""><i class="fas fa-vote-yea"></i><span>Watchlist</span></a></li>
+                    <li><a href=""><i class="fas fa-tv"></i><span>Tv en directo</span></a></li>
+                    <li><a href=""><i class="fas fa-film"></i><span>Peliculas y programas</span></a></li>
+                    <li><a href=""><i class="far fa-compass"></i><span>Discover</span></a></li>
+                    <li><a href=""><i class="fas fa-music"></i><span>Música</span></a></li>
+                    <li><a href=""><i class="fas fa-plus"></i><span>Tu contenido</span></a></li>
                 </ul>
             </sidebar>
 
@@ -147,6 +147,7 @@
     <script>
         const btn = document.getElementById('hidden-text');
         const text  = document.querySelector('.parrafo');
+        const btnMenu = document.getElementById('icon-menu');
 
         btn.addEventListener('click', () => {
             if(text.classList.contains('parrafo-completo')){
@@ -157,6 +158,16 @@
                 btn.textContent = 'Menos';
             }
         });
+
+        btnMenu.addEventListener('click', ()=> {
+            const sidebarContent =  document.querySelector('.container-body');
+            
+            if(sidebarContent.classList.contains('sidebar-active')){
+                sidebarContent.classList.remove('sidebar-active', 'sidebar-active-none');
+            }else{
+                sidebarContent.classList.add('sidebar-active', 'sidebar-active-none');
+            }
+        })
 
     </script>
 </body>

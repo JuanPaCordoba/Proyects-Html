@@ -11,19 +11,23 @@ body {
     height: 100vh;
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(90deg, rgb(94, 1, 44), rgb(77, 77, 134));
-    background-size: cover; /* Asegura que el fondo cubra el contenedor */
+    background-size: cover;
+    /* Asegura que el fondo cubra el contenedor */
     background-repeat: no-repeat;
-    background-position: center; /* Centra la imagen en el contenedor */
-    background-attachment: fixed; /* Asegura que la imagen no se mueva con el scroll */
+    background-position: center;
+    /* Centra la imagen en el contenedor */
+    background-attachment: fixed;
+    /* Asegura que la imagen no se mueva con el scroll */
 }
 
 .principal {
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
         "header"
         "body";
-    
+
 }
+
 .principal header {
     grid-area: header;
     background-color: rgb(31, 29, 29);
@@ -33,7 +37,7 @@ body {
     border-radius: 3px;
 }
 
-.principal header nav{
+.principal header nav {
     display: flex;
     align-items: center;
     width: 100%;
@@ -49,7 +53,7 @@ body {
     height: 100%;
 }
 
-.leftnav i{
+.leftnav i {
     color: white;
     font-size: 1.1rem;
     padding: 0;
@@ -57,13 +61,13 @@ body {
     margin-left: 10px;
 }
 
-.leftnav img{
+.leftnav img {
     width: 70px;
     height: 40px;
-    margin:  0 20px;
+    margin: 0 20px;
 }
 
-.leftnav .lef{
+.leftnav .lef {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -71,14 +75,14 @@ body {
 }
 
 
-.icon{
+.icon {
     display: flex;
     align-items: center;
     justify-self: center;
     width: 33rem;
 }
 
-.icon input{
+.icon input {
     width: 90%;
     background-color: rgb(61, 60, 60);
     opacity: 1.5;
@@ -88,7 +92,7 @@ body {
     padding: 8.7px 10px;
 }
 
-.icon i{
+.icon i {
     padding: 0;
     margin: 0;
     position: absolute;
@@ -96,15 +100,15 @@ body {
     font-size: 0.9rem;
 }
 
-.rigtnav{
+.rigtnav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     width: 50%;
 }
 
-.rigtnav button{
-    margin: 0 15px 0  0;
+.rigtnav button {
+    margin: 0 15px 0 0;
     padding: 8px 12px;
     font-size: 2vh;
     background-color: #e5a00d;
@@ -112,8 +116,7 @@ body {
     border-radius: 3px;
 }
 
-.rigth
-{
+.rigth {
     display: flex;
     align-items: center;
     justify-content: stretch;
@@ -123,20 +126,20 @@ body {
     width: 198px;
 }
 
-.rigth img{
+.rigth img {
     width: 10px;
     height: 10px;
     margin: 0 10px 0 5px;
 }
 
-.rigth .img{
+.rigth .img {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 0 0 20px;
 }
 
-.rigth .img img{
+.rigth .img img {
     width: 20px;
     height: 20px;
     color: #ffffff;
@@ -145,7 +148,7 @@ body {
     margin: 0 15px;
 }
 
-.rigth .perfil{
+.rigth .perfil {
     width: 25px;
     height: 25px;
     border-radius: 50%;
@@ -160,7 +163,7 @@ body {
 
 }
 
-.rigth .perfil span{
+.rigth .perfil span {
     background-color: #e5a00d;
     width: 20px;
     height: 15px;
@@ -178,18 +181,22 @@ body {
     margin-left: 10px;
 }
 
-.sidebar ul{
+.sidebar ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 20px 10px 15px;
 }
 
-.sidebar ul li{
+.sidebar ul li {
+    display: flex; /* Flexbox para mantener el icono y el texto en una línea */
+    align-items: center; /* Alinea verticalmente el icono y el texto */
     padding: 7px 0;
 }
 
-.sidebar ul li a{
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
     text-decoration: none;
     color: white;
     font-weight: 200;
@@ -197,27 +204,45 @@ body {
 }
 
 
-.sidebar ul li a i{
+
+.sidebar ul li a i {
     margin: 0;
     padding: 0;
     margin-right: 20px;
     font-size: 1.3rem;
 }
 
+.sidebar ul li span{
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
 
-
-.container-body{
+.container-body {
     margin: 0;
     padding: 0;
     grid-area: body;
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
         "sidebar content";
     grid-template-columns: 280px auto;
-    
+    transition: all 0.1s linear;
 }
 
-.content{
+.sidebar-active {
+    grid-template-columns: 70px auto;
+    transition: all 0.3s ease;
+}
+
+.sidebar-active-background{
+    background-color: transparent;
+
+}
+
+.sidebar-active-none ul li span {
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.content {
     grid-area: content;
     border-radius: 3px;
     margin-right: 10px;
@@ -226,13 +251,13 @@ body {
     padding: 0 40px;
 }
 
-.content .nav{
+.content .nav {
     display: flex;
     align-items: center;
     width: 100%;
 }
 
-.content .nav .nav-left{
+.content .nav .nav-left {
     display: flex;
     align-items: center;
     width: 100%;
@@ -240,24 +265,24 @@ body {
     padding: 15px 0;
 }
 
-.content .nav .nav-left i{
+.content .nav .nav-left i {
     cursor: pointer;
 }
 
-.content .nav .nav-left h5{
+.content .nav .nav-left h5 {
     margin-right: 10px;
     font-size: 1rem;
     font-weight: 100;
 }
 
-.content .nav .nav-right{
+.content .nav .nav-right {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     width: 100%;
 }
 
-.content .nav .nav-right i{
+.content .nav .nav-right i {
     color: white;
     font-size: 1.3rem;
     cursor: pointer;
@@ -269,35 +294,35 @@ body {
     height: 20px;
     align-items: center;
     width: 100px;
-    border-left: 1px  solid #ffffff;
-    border-right: 1px  solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
     justify-content: space-evenly;
     padding: 15px 0;
     margin: 0 15px;
 }
 
-.center-nav i{
+.center-nav i {
     color: white;
     font-size: 1.3rem;
     cursor: pointer;
 
 }
 
-.filter-menu{
+.filter-menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 15px 0;
 }
 
-.filter-menu .bars-menu{
+.filter-menu .bars-menu {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 20px;
 }
 
-.filter-menu .bars-menu i:first-child{
+.filter-menu .bars-menu i:first-child {
     color: white;
     font-size: 1.4rem;
     margin: 0 5px;
@@ -305,27 +330,27 @@ body {
 
 }
 
-.filter-menu .bars-menu i:nth-child(2){
+.filter-menu .bars-menu i:nth-child(2) {
     color: white;
     font-size: 0.8rem;
     cursor: pointer;
 
 }
 
-.body-content{
+.body-content {
     display: flex;
     justify-content: space-between;
     margin-top: 15px;
 }
 
-.body-encabezado-content{
+.body-encabezado-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     max-width: 640px;
 }
 
-.body-encabezado-content a{
+.body-encabezado-content a {
     color: white;
     font-size: 30px;
     text-decoration: none;
@@ -334,51 +359,52 @@ body {
     padding: 0;
 }
 
-.body-encabezado-content h5{
+.body-encabezado-content h5 {
     color: white;
     font-size: 1.1rem;
 }
 
-.body-encabezado-content a:hover{
+.body-encabezado-content a:hover {
     color: white;
     text-decoration: underline;
 }
 
-.encabezado-body{
+.encabezado-body {
     gap: 40px;
     display: flex;
     justify-content: space-between;
     padding: 30px 0;
 }
 
-.encabezado-body img{
+.encabezado-body img {
     width: 290px;
     height: 170px;
     object-fit: cover;
     border-radius: 5px;
 }
 
-.description{
+.description {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 6px;
 }
 
-.description .description-cap{
+.description .description-cap {
     display: flex;
     color: white;
 }
 
 
 
-.description .description-cap a, p{
+.description .description-cap a,
+p {
     margin-right: 20px;
     font-size: 0.8rem;
     font-weight: 300;
 }
 
-.description .description-date{
+.description .description-date {
     display: flex;
     color: white;
 }
@@ -426,48 +452,48 @@ body {
     left: initial;
 }
 
-.rating-star input:hover ~ input::before,
+.rating-star input:hover~input::before,
 .rating-star input:hover::before,
-.rating-star input:checked ~ input::before,
+.rating-star input:checked~input::before,
 .rating-star input:checked::before {
     color: #e5a00d;
 }
 
-.opciones-content{
+.opciones-content {
     display: flex;
     gap: 5px;
     margin-top: 30px;
 }
 
-.opciones-content button{
+.opciones-content button {
     padding: 10px 20px;
 }
 
-.opciones-content button:first-child{
+.opciones-content button:first-child {
     background-color: #e5ab0d;
     border: none;
     border-radius: 3px;
     color: rgb(36, 35, 35);
 }
 
-.opciones-content button:first-child:hover{
+.opciones-content button:first-child:hover {
     background-color: #ffe815;
 }
 
-.opciones-content button .button{
+.opciones-content button .button {
     width: 350px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.opciones-content button .button i{
+.opciones-content button .button i {
     font-size: 22px;
     color: rgb(36, 35, 35);
 
 }
 
-.opciones-content .button span{
+.opciones-content .button span {
     font-weight: 500;
     font-size: 16px;
 
@@ -475,69 +501,74 @@ body {
 
 
 
-.opciones-content button{
-   background-color: transparent; 
-   border: none;
-   border-radius: 3px;
+.opciones-content button {
+    background-color: transparent;
+    border: none;
+    border-radius: 3px;
 }
 
-.opciones-content button:hover{
+.opciones-content button:hover {
     background-color: #80808073;
 }
 
-.opciones-content button i{
+.opciones-content button i {
     font-size: 22px;
     color: white;
 }
 
-    
 
-.parrafo{
+
+.parrafo {
     margin-top: 30px;
-    max-height: 60px; /* Altura máxima cuando está truncado */
+    max-height: 60px;
+    /* Altura máxima cuando está truncado */
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3; /* Para navegadores WebKit */
-    line-clamp: 3; /* Propiedad estándar */
+    -webkit-line-clamp: 3;
+    /* Para navegadores WebKit */
+    line-clamp: 3;
+    /* Propiedad estándar */
     text-overflow: ellipsis;
-    transition: max-height 1s ease-in-out; /* Transición suave para expandir */
+    transition: max-height 1s ease-in-out;
+    /* Transición suave para expandir */
 }
 
-.parrafo p{
+.parrafo p {
     color: white;
     font-size: 0.85rem;
     font-weight: 300;
 }
 
-.parrafo-mas{
+.parrafo-mas {
     line-height: 15px;
     padding: 0;
     margin: 0;
 }
 
-.parrafo-mas span{
+.parrafo-mas span {
     color: #e5a00d;
     font-size: 0.8rem;
     cursor: pointer;
     padding: 0 5px 0 0;
 }
 
-.parrafo-mas i{
+.parrafo-mas i {
     color: #e5a00d;
     font-size: 0.8rem;
     cursor: pointer;
 }
 
 .parrafo-mas:hover span,
-.parrafo-mas:hover i{
+.parrafo-mas:hover i {
     color: white;
 }
 
-.parrafo-completo{
-    max-height: 1000px; /* Altura suficiente para mostrar todo el texto */
-    -webkit-line-clamp: unset; /* Quita la limitación de líneas */
-    line-clamp: unset; /* Quita la limitación de líneas */
+.parrafo-completo {
+    max-height: 1000px;
+    /* Altura suficiente para mostrar todo el texto */
+    -webkit-line-clamp: unset;
+    /* Quita la limitación de líneas */
+    line-clamp: unset;
+    /* Quita la limitación de líneas */
 }
-
-
