@@ -125,17 +125,30 @@
                             </div>
 
                             <div class="parrafo">
-                                <p>La junta directiva de Ecomoda se reúne y todos se niegan a pagar la fianza de Armando. Se descubre el espionaje en contra de Ecomoda pero Nacho logra inculpar a Armando. Presionada por todo, Mila se mete en problemas con la policía y Betty acude a la cárcel a pedirle explicaciones a Armando. Pero el reclamo se convierte en algo más.</p>
-                            
+                                <p>La junta directiva de Ecomoda se reúne y todos se niegan a pagar la fianza de
+                                    Armando. Se descubre el espionaje en contra de Ecomoda pero Nacho logra inculpar a
+                                    Armando. Presionada por todo, Mila se mete en problemas con la policía y Betty acude
+                                    a la cárcel a pedirle explicaciones a Armando. Pero el reclamo se convierte en algo
+                                    más.</p>
+
                             </div>
                             <div class="parrafo-mas">
                                 <span id="hidden-text">Más </span><i class="fas fa-arrows-alt-v"></i>
                             </div>
+                            <div class="activity-perfil">
+                                <div class="perfil">
+                                    J
+                                </div>
+                                <p>Actividad de tú</p>
+                            </div>
+                            
                         </div>
 
                     </div>
+                    <span class="text-ubi">Ver desde estas ubicaciones</span>
                 </div>
 
+                
 
             </div>
 
@@ -146,25 +159,25 @@
 
     <script>
         const btn = document.getElementById('hidden-text');
-        const text  = document.querySelector('.parrafo');
+        const text = document.querySelector('.parrafo');
         const btnMenu = document.getElementById('icon-menu');
 
         btn.addEventListener('click', () => {
-            if(text.classList.contains('parrafo-completo')){
+            if (text.classList.contains('parrafo-completo')) {
                 text.classList.remove('parrafo-completo');
                 btn.textContent = 'Más';
-            }else{
+            } else {
                 text.classList.add('parrafo-completo');
                 btn.textContent = 'Menos';
             }
         });
 
-        btnMenu.addEventListener('click', ()=> {
-            const sidebarContent =  document.querySelector('.container-body');
-            
-            if(sidebarContent.classList.contains('sidebar-active')){
+        btnMenu.addEventListener('click', () => {
+            const sidebarContent = document.querySelector('.container-body');
+
+            if (sidebarContent.classList.contains('sidebar-active')) {
                 sidebarContent.classList.remove('sidebar-active', 'sidebar-active-none');
-            }else{
+            } else {
                 sidebarContent.classList.add('sidebar-active', 'sidebar-active-none');
             }
         })
