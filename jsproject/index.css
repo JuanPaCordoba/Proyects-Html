@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: rgb(244, 245, 252);
+}
+
+
+.main{
+    max-width: 2600px;
+    display: flex;
+    height: 100vh;
+    padding: 10px 0;
+    justify-content: space-evenly;
+    background-color: rgb(230, 230, 230);
+}
+
+
+.principal{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.principal ul{
+    padding: 0 20px;
+    margin: 0;
+
+}
+
+.principal .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.principal .header button{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(116, 104, 245);
+    color: white;
+    cursor: pointer;
+}
+
+.principal .header button:hover{
+    background-color: rgb(62, 45, 245);
+}
+
+.principal ul li{
+    list-style: none;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+    height: 50px;
+    background-color: rgba(226, 226, 226, 0.877);
+    margin: 5px 0;
+}
+
+.leftcontainer h4, p{
+    padding: 0;
+    margin: 1px 0;
+}
+
+.rigthcontainer{
+    display: flex;
+    
+}
+
+.rigthcontainer i{
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.rigthcontainer i:hover{
+    color: rgb(116, 104, 245);
+}
+
+.formulario{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    display: none;
+    z-index: 9999;
+    width: 300px;
+    border-radius: 5px;
+    background-color: white;
+
+}
+
+.formulario form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.formulario form input{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid rgb(200, 200, 200);
+    margin: 10px 0;
+    padding: 0 10px;
+    outline: none;
+}
+
+.formdata{
+    width: 100%;
+    padding: 30px;
+}
+
+.title{
+    margin-bottom: 30px;
+}
+
+.title h2{
+    margin: 4px 0;
+    color: rgb(127, 193, 255);
+}
+
+.title p{
+    font-size: 11px;
+}
+
+.inputs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.inputs input{
+    text-indent: 20px; /* Mueve el cursor 20px a la derecha */
+}
+
+.inputs i{
+    position: absolute;
+    margin: 10px 10px;
+    font-size: 13px;
+    color: rgb(48, 48, 49);
+}
+
+.formdata button{
+   margin: 20px 0;
+   padding: 10px;
+   border: none;
+    border-radius: 5px;
+    background-color: rgb(116, 104, 245);
+    color: white;
+    cursor: pointer;
+    width: 100%;
+}
+
+#btn:hover{
+    background-color: rgb(100, 87, 252);
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.new-item {
+    animation: fadeInDown 0.5s ease forwards;
+}
+
+.menu{
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px 10px;
+}
+
+
+.menu .menu-list ul li{
+    list-style: none;
+    margin: 0 0 14px 0;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    width: 80%;
+    margin-bottom: 3px;
+}
+
+
+.active .icon{
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: white;
+    background-color: rgb(55, 0, 255);
+}
+
+.menu .menu-list ul li a{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(20, 20, 20);
+}
+
+.menu .menu-list ul li a i{
+    font-size: 13px;
+}
+
+
+.menu .menu-list ul li a p{
+    font-size: 11px;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+

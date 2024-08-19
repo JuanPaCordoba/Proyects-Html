@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="overlay"></div>
+
+    <div class="formulario">
+        <form>
+            <div class="formdata">
+                <div class="title">
+                    <h2>Medi CIT</h2>
+                    <p>Registro de pacientes</p>
+                </div>
+                <div class="inputs">
+                    <input type="text" id="nombre" placeholder="Nombre"><i class="far fa-user"></i>
+                </div>
+                <div class="inputs">
+                    <input type="number" id="edad" placeholder="Edad"><i class="fas fa-sort-numeric-up-alt"></i>
+                </div>
+                <div class="inputs">
+                    <input type="text" id="eps" placeholder="Eps"><i class="fas fa-hospital-symbol"></i>
+                </div>
+                <button id="btn">Guardar</button>
+                <button style="display: none;" id="actualizar">Actualizar</button>
+            </div>
+        </form>
+    </div>
+
+    <main class="main">
+
+        <div class="menu">
+            <div class="menu-list">
+                <ul>
+                    <li class="active">
+                        <a href="#">
+                            <div class="icon ">
+                                <i class="fa-solid fa-house-laptop"></i>
+                            </div>
+                            <p>Inicio</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <p>Pacientes</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon">
+                                <i class="fas fa-calendar-day"></i>
+                            </div>
+                            <p>Citas</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="principal">
+            <div class="header">
+                <h3>Personal</h3>
+                <button id="btn-agregar">Agregar</button>
+            </div>
+            <ul id="listas">
+
+
+            </ul>
+
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
