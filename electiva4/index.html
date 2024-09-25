@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="overlay"></div>
+
+    <div class="formulario">
+        <form>
+            <div class="formdata">
+                <div class="title">
+                    <div class="personTitle">
+                        <img src="/resorces/FormElectiva4/user (1).png" alt="">
+                        <span>Datos Personales</span>
+                    </div>
+                    <div class="imgPerson"><img src="/resorces/FormElectiva4/userHeader.png" alt=""></div>
+                </div>
+
+                <div class="inputs">
+                    <input type="text" id="nombre">
+                    <label>Ingrese su nombre</label>
+                    <img src="/resorces/FormElectiva4/InputPerson.png" alt="">
+                </div>
+                
+                <div class="inputs-div">
+                    <select name="Sexo" id="">
+                        <option value="Sexo">Sexo</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                    </select>
+                    <div class="inputs">
+                        <input type="date" id="date">
+                    </div>
+                </div>
+                <button id="btn">Guardar</button>
+                <button style="display: none;" id="actualizar">Actualizar</button>
+            </div>
+        </form>
+    </div>
+
+    <main class="main">
+
+        <div class="menu">
+            <div class="menu-list">
+                <ul>
+                    <li class="active">
+                        <a href="#">
+                            <div class="icon ">
+                                <i class="fa-solid fa-house-laptop"></i>
+                            </div>
+                            <p>Inicio</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <p>Pacientes</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon">
+                                <i class="fas fa-calendar-day"></i>
+                            </div>
+                            <p>Citas</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="principal">
+            <div class="header">
+                <h3>Personal</h3>
+                <button id="btn-agregar">Agregar</button>
+            </div>
+            <ul id="listas">
+
+
+            </ul>
+
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
