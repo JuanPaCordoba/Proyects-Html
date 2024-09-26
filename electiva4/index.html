@@ -25,7 +25,7 @@
                 </div>
 
                 <div class="inputs">
-                    <input type="text" id="nombre">
+                    <input type="text" id="nombre" required>
                     <label>Ingrese su nombre</label>
                     <img src="../resorces/FormElectiva4/InputPerson.png" alt="">
                 </div>
@@ -78,7 +78,7 @@
                             </div>
         
                             <div class="inputs">
-                                <input type="text" id="departamento">
+                                <input type="text" id="departamento" required>
                                 <label>Departamento</label>
                                 <i class="fas fa-city"></i>
                             </div>
@@ -86,20 +86,24 @@
 
                         <div class="locationContact">
                             <div class="inputs">
-                                <input type="text" id="ciudad">
+                                <input type="text" id="ciudad" required>
                                 <label>Ciudad</label>
                                 <i class="fas fa-city"></i>
                             </div>
         
                             <div class="inputs">
-                                <input type="text" id="telefono">
+                                <input type="text" id="telefono" required>
                                 <label>Telefono</label>
                                 <i class="fas fa-phone"></i>
                             </div>
                         </div>
-                        <input type="range" id="temperature" min="0" max="40" step="1" value="20" oninput="updateTemperature(this.value)">
-                        <span id="temperatureValue">20°C</span>
-
+                        <label class="tem">Temperatura (°)</label>
+                        <div class="userTemperatura">
+                            <div class="temperatura">
+                                <input type="range" id="temperature" min="0" max="40" step="1" value="20" oninput="updateTemperature(this.value)">   
+                            </div>
+                            <span id="temperatureValue">20°C</span>
+                        </div>
                     </div>
     
                 </div>
