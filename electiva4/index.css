@@ -103,6 +103,7 @@ body{
     background-color: white;
     border-radius: 15px;
     border: 4px solid #abd1ed;
+    display: none;
 
 }
 
@@ -384,7 +385,7 @@ body{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    display: block;
+    display: none;
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -598,7 +599,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #abd1ed ; 
+    background: linear-gradient(90deg, rgba(235, 83, 13, 0.5) 50%, rgba(226, 188, 63, 0.5) 100%); 
     height: 45px;
     width: 350px;
     border-radius: 50px;

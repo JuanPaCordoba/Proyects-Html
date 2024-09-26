@@ -7,14 +7,17 @@ const lista = document.getElementById('listas');
 function renderPersonas() {
     lista.innerHTML = '';
     personas.forEach(persona => {
+        var today = new Date().toISOString().split('T')[0]; 
+        const edadUser = today - persona.edad;
+        console.log(today);
         const elemento = document.createElement('li');
         elemento.classList.add('new-item'); // Aplicar la clase de animación
         elemento.innerHTML = `<div class="leftcontainer">
                         <h4>${persona.nombre}</h4>
-                        <p style="font-size: 11px"> <b>${persona.edad}</b> Años</p>
+                        <p style="font-size: 11px"> <b>${edadUser}</b> Años</p>
                     </div>
                     <div class="rigthcontainer">
-                        <h3 style="font-size: 17px">${persona.eps}</h3>
+                        <h3 style="font-size: 17px">${persona.pais}</h3>
                         <i id="editar" class="fa-regular fa-pen-to-square editar"></i>
                         <i class="fa-solid fa-trash delete"></i>
                     </div>`
@@ -30,18 +33,23 @@ const actu = document.getElementById('actualizar');
 btn.addEventListener('click', (event) => {
     event.preventDefault();
     const nombre = document.getElementById('nombre').value;
-    const edad = document.getElementById('edad').value;
-    const eps = document.getElementById('eps').value;
+    const sexo = document.getElementById('sexo').value;
+    const edad = document.getElementById('date').value;
+    const pais = document.getElementById('span_pais').textContent;
+    const dpto = document.getElementById('departamento').value;
+    const ciudad = document.getElementById('ciudad').value;
+    const telefono = document.getElementById('telefono').value;
+    const temperatura = document.getElementById('temperatureValue').textContent;
 
-    if (nombre === '' || edad === '' || eps === '') {
+    if (nombre === '' || edad === '' || sexo === '' || pais === '' || dpto === '' || ciudad === '' || telefono === '' || temperatura === '') {
         alert('Por favor diligencie todos los campos');
     } else {
-        personas.unshift({ nombre, edad, eps });
+        personas.unshift({ nombre, sexo, edad, pais, dpto, ciudad, telefono, temperatura});
         localStorage.setItem('personas', JSON.stringify(personas));
-        limpiarCampos();
         renderPersonas();
         document.getElementsByClassName('overlay')[0].style = 'display: none';
         document.getElementsByClassName('formulario')[0].style = 'display: none';
+        limpiarCampos();
     }
 });
 
@@ -81,8 +89,15 @@ function openModalEdit() {
 
 function limpiarCampos() {
     document.getElementById('nombre').value = '';
-    document.getElementById('edad').value = '';
-    document.getElementById('eps').value = '';
+    document.getElementById('sexo').value = '';
+    document.getElementById('date').value = '';
+    document.getElementById('span_pais').textContent = ''; 
+    document.getElementById('departamento').value = '';
+    document.getElementById('ciudad').value = '';
+    document.getElementById('telefono').value = '';
+    document.getElementById('temperatureValue').textContent = '';
+
+
 }
 
 actu.addEventListener('click', (event) => {
