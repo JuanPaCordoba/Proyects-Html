@@ -185,12 +185,25 @@ const countries = [
 document.addEventListener('DOMContentLoaded', () => {
     const ul = document.getElementById('op');
     const input = document.getElementById('search');
+    let selectedCountry = ''; // Variable para almacenar el país seleccionado
 
     // Cargar la lista de países
     countries.forEach(item => {
         const li = document.createElement('li');
         li.textContent = item;
         ul.appendChild(li);
+
+        li.addEventListener('click', () => {
+            selectedCountry = item; // Guardar el país seleccionado en la variable
+            document.getElementById('span_pais').innerHTML = selectedCountry; // Limpiar el campo de búsqueda
+            let content = document.getElementById('content');
+            let wrapper = document.getElementById('wrapper-img');
+            content.style.opacity = '0'; // Iniciar opacidad a 0
+            setTimeout(() => {
+                content.classList.remove('content_active'); // Remover la clase después de la transición de opacidad
+                wrapper.classList.remove('img-active');
+            }, 50);
+        });
     });
 
     // Filtrar la lista según la búsqueda
@@ -210,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 document.addEventListener('DOMContentLoaded', () => {
 
-    img = document.getElementById('imgPais');
+    img = document.getElementById('wrapper-img');
     let content = document.getElementById('content');
     let wrapper = document.getElementById('wrapper-img');
 
@@ -236,3 +249,8 @@ document.addEventListener('DOMContentLoaded', () => {
 function updateTemperature(value) {
     document.getElementById('temperatureValue').innerText = value + '°C';
 }
+
+
+//limitar fecha 
+var today = new Date().toISOString().split('T')[0];
+document.getElementById("date").setAttribute('max', today);
