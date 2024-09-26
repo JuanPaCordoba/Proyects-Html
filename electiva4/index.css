@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -101,7 +102,7 @@ body{
     border-radius: 5px;
     background-color: white;
     border-radius: 15px;
-    border: 5px solid #abd1ed;
+    border: 4px solid #abd1ed;
 
 }
 
@@ -114,7 +115,7 @@ body{
 
 .formulario form input{
     width: 100%;
-    height: 43px;
+    height: 40px;
     border-radius: 6px;
     border: 3px solid #6398bf;
     margin: 10px 0;
@@ -135,7 +136,7 @@ body{
 .formulario form .inputs img{
     width: 30px;
     position: relative;
-    right: 105px;
+    right: 170px;
 }
 
 
@@ -158,30 +159,70 @@ body{
 }
 
 .formulario form input#nombre{
-    width: 80%;
+    width: 290px;
 }
 
 .inputs-div{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    width: 350px;
 }
 
-.inputs-div select{
+.dropdown{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.select-sexo{
     background: transparent;
     color: #6398bf;
+    appearance: none;
     border: none;
     border: 3px solid #6398bf;
     border-radius: 5px;
-    height: 43px;
+    height: 40px;
     font-size: 17px;
-    width: 170px;
+    width: 150px;
     font-weight: bold;
     margin: 10px 0;
+    padding-left: 5px;
+    outline: none;
+    background-color: #fff;
+}
+
+.select-sexo option{
+    background-color: #fff;
+    color: #6398bf;
+    font-size: 17px;
+}
+
+.dropdown .dropdown-icon{
+    position: absolute;
+    right: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    background-color: #abd1ed;
+    height: 34px;
+    width: 35px;
+    
+
+}
+
+.dropdown .dropdown-icon img{
+    width: 10px;
+    rotate: 90deg;
 }
 
 .inputs input#date{
-    width: 250px;
+    width: 180px;
 }
+
+
 
 .formdata{
     width: 100%;
@@ -189,7 +230,7 @@ body{
 }
 
 .title{
-    margin-bottom: 30px;
+    margin-bottom: 12px;
     height: 50px;
     border-radius: 7px;
     background-color: #6398bf;
@@ -197,7 +238,6 @@ body{
     justify-content: space-between;
     align-items: center;
     border-radius: 50px;
-    
 }
 
 .title h2{
@@ -243,11 +283,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-    
 }
-
-
 
 .inputs i{
     position: absolute;
@@ -351,3 +387,196 @@ body{
     z-index: 1000;
 }
 
+/*dropdown*/
+
+::selection {
+    background: #abd1ed;
+    color: #fff;
+}
+
+.location{
+    margin-top: 10px;
+}
+
+.locationCity{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.locationContact{
+    display: flex;
+    align-items: center;
+}
+
+.location .inputs input#departamento{
+    width: 180px;
+}
+
+.location .inputs i{
+    position: relative;
+    right: 38px;
+    color: #337aad;
+}
+
+
+.wrapper{
+    width: 370px;
+    position: relative; /* Necesario para posicionar el dropdown absoluto respecto al contenedor */
+
+}
+
+.wrapper span{
+    color: #6398bf;
+    font-weight: bold;
+}
+
+.wrapper-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #abd1ed;
+    width: 35px;
+    height: 34px;
+}
+
+.wrapper-img img{
+    width: 10px;
+    rotate: 90deg;
+}
+
+.img-active{
+    rotate: 180deg;
+}
+
+.select-btn, li{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    padding-left: 5px;
+}
+
+.select-btn{
+    height: 25px;
+    border: none;
+    border: 3px solid #6398bf;
+    height: 40px;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.content{
+    position: absolute; /* Establece la posición absoluta */
+    top: 1;
+    left: 0;
+    width: 200px;
+    border: 1px solid #6398bf;
+    border-radius: 5px;
+    background-color: #fff;
+    z-index: 9;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height ease 0.5s;
+    margin-top: 5px;
+    display: none;
+}
+
+.content_active{
+    display: block;
+    max-height: 200px;
+    transition: max-height ease 0.5s;
+}
+
+.content .search{
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .search i{
+    position: absolute;
+    left: 15px;
+    color: #6398bf;
+    font-size: 15px;
+}
+
+.content .search input{
+    border: 1px solid #6398bf;
+    font-size: 15px;
+    height: 34px;
+    margin: 5px 0;
+    padding: 0 30px;
+    border-radius: 3px;
+}
+
+.content .options li{
+    padding: 8px;
+    list-style: none;
+    cursor: pointer;
+    color: #727272;
+}
+
+.content .options{
+    max-height: 110px;
+    overflow-y: auto;
+    padding-left: 5px;
+}
+
+.content .options li:hover{
+    border-radius: 10px;
+    background-color: #e3eff8;
+}
+
+.userLocation{
+    height: 250px;
+    border: 3px solid #6398bf;
+    border-radius: 10px;
+    padding: 10px 10px;
+    margin-top: 10px;
+
+}
+
+.locationBanner{
+    background-color: #6398bf;
+    height: 40px;
+    width: 210px;
+    display: flex;
+    align-items: center;
+    border: 3px solid #337aad;
+    border-radius: 50px;
+    margin-top: 5px;
+}
+
+.locationBanner .ubicacionIcon{
+    margin-left: 5px;
+    width: 23px;
+    height: 23px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.locationBanner span{
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+.locationBanner .ubicacionIcon i{
+    color: #6398bf;
+    
+}
+
+.inputs input#ciudad{
+    width: 160px;
+}
+
+.inputs input#telefono{
+    width: 170px;
+}

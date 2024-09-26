@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+    <script src="index.js"></script>
+    <script src="contry.js"> </script>
     <title>Document</title>
 </head>
 
@@ -29,17 +30,81 @@
                     <label>Ingrese su nombre</label>
                     <img src="../resorces/FormElectiva4/InputPerson.png" alt="">
                 </div>
-                
+
+
+
                 <div class="inputs-div">
-                    <select name="Sexo" id="">
-                        <option value="Sexo">Sexo</option>
-                        <option value="Masculino">Masculino</option>
-                        <option value="Femenino">Femenino</option>
-                    </select>
+                    <div class="dropdown">
+                        <select class="select-sexo" name="Sexo" id="">
+                            <option value="Sexo">Sexo</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Femenino">Femenino</option>
+                        </select>
+                        <div class="dropdown-icon">
+                            <img src="../resorces/FormElectiva4/image (2).png" alt="">
+                        </div>
+                    </div>
                     <div class="inputs">
-                        <input type="date" id="date">
+                        <input type="date" id="date" placeholder="Cumpleaños">
                     </div>
                 </div>
+
+                <div class="userLocation">
+                    <div class="locationBanner">
+                        <div class="ubicacionIcon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <span>Ubicación y contacto</span>
+                    </div>
+    
+                    <div class="location">
+                        
+                        <div class="locationCity">
+                            <div class="wrapper">
+                                <div class="select-btn">
+                                    <span>Selecciona tu País</span>
+                                    <div id="wrapper-img" class="wrapper-img">
+                                        <img id="imgPais" src="../resorces/FormElectiva4/image (2).png" alt="">
+                                    </div>
+                                </div>
+                                <div id="content" class="content">
+                                    <div class="search">
+                                        <input type="text" id="search" spellcheck="false" placeholder="Buscar">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                    <ul id="op" class="options">
+        
+                                    </ul>
+                                </div>
+                            </div>
+        
+                            <div class="inputs">
+                                <input type="text" id="departamento">
+                                <label>Departamento</label>
+                                <i class="fas fa-city"></i>
+                            </div>
+                        </div>
+
+                        <div class="locationContact">
+                            <div class="inputs">
+                                <input type="text" id="ciudad">
+                                <label>Ciudad</label>
+                                <i class="fas fa-city"></i>
+                            </div>
+        
+                            <div class="inputs">
+                                <input type="text" id="telefono">
+                                <label>Telefono</label>
+                                <i class="fas fa-phone"></i>
+                            </div>
+                        </div>
+                        <input type="range" id="temperature" min="0" max="40" step="1" value="20" oninput="updateTemperature(this.value)">
+                        <span id="temperatureValue">20°C</span>
+
+                    </div>
+    
+                </div>
+
                 <button id="btn">Guardar</button>
                 <button style="display: none;" id="actualizar">Actualizar</button>
             </div>
@@ -93,7 +158,6 @@
         </div>
     </main>
 
-    <script src="index.js"></script>
 </body>
 
 </html>
