@@ -245,10 +245,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
+let valTemp = '';
+let temp = document.getElementById('temperatureValue');
+let tempColor = document.getElementById('temperatura');
 function updateTemperature(value) {
-    document.getElementById('temperatureValue').innerText = value + '°C';
+    temp.innerText = value + '°C';
+    if(value > 25){
+        console.log(value);
+        tempColor.style.background = 'linear-gradient(90deg, rgba(235, 83, 13, 0.5) 50%, rgba(226, 188, 63, 0.5) 100%)';
+    }else{
+        tempColor.style.background = 'linear-gradient(90deg, rgba(54, 13, 235, 0.5) 50%, rgba(101, 116, 253, 0.5) 100%)';
+    }
 }
+
 
 
 //limitar fecha 

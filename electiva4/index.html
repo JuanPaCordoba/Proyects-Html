@@ -47,69 +47,71 @@
                         <input type="date"  id="date" placeholder="Cumpleaños">
                     </div>
                 </div>
-
-                <div class="userLocation">
-                    <div class="locationBanner">
-                        <div class="ubicacionIcon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <span>Ubicación y contacto</span>
+            </div>
+            
+            <div class="userLocation">
+                <div class="locationBanner">
+                    <div class="ubicacionIcon">
+                        <i class="fas fa-map-marker-alt"></i>
                     </div>
-    
-                    <div class="location">
-                        
-                        <div class="locationCity">
-                            <div class="wrapper">
-                                <div class="select-btn">
-                                    <span id="span_pais">Selecciona tu País</span>
-                                    <div id="wrapper-img" class="wrapper-img">
-                                        <img id="imgPais" src="../resorces/FormElectiva4/image (2).png" alt="">
-                                    </div>
-                                </div>
-                                <div id="content" class="content">
-                                    <div class="search">
-                                        <input type="text" id="search" spellcheck="false" placeholder="Buscar">
-                                        <i class="fas fa-search"></i>
-                                    </div>
-                                    <ul id="op" class="options">
-                                        
-                                    </ul>
+                    <span>Ubicación y contacto</span>
+                </div>
+
+                <div class="location">
+                    
+                    <div class="locationCity">
+                        <div class="wrapper">
+                            <div class="select-btn">
+                                <span id="span_pais">País</span>
+                                <div id="wrapper-img" class="wrapper-img">
+                                    <img id="imgPais" src="../resorces/FormElectiva4/image (2).png" alt="">
                                 </div>
                             </div>
-        
+                            <div id="content" class="content">
+                                <div class="search">
+                                    <input type="text" id="search" spellcheck="false" placeholder="Buscar">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <ul id="op" class="options">
+                                    
+                                </ul>
+                            </div>
                             <div class="inputs">
                                 <input type="text" id="departamento" required>
                                 <label>Departamento</label>
                                 <i class="fas fa-city"></i>
                             </div>
                         </div>
+    
+                        
+                    </div>
 
-                        <div class="locationContact">
-                            <div class="inputs">
-                                <input type="text" id="ciudad" required>
-                                <label>Ciudad</label>
-                                <i class="fas fa-city"></i>
-                            </div>
-        
-                            <div class="inputs">
-                                <input type="text" id="telefono" required>
-                                <label>Telefono</label>
-                                <i class="fas fa-phone"></i>
-                            </div>
+                    <div class="locationContact">
+                        <div class="inputs">
+                            <input type="text" id="ciudad" required>
+                            <label>Ciudad</label>
+                            <i class="fas fa-city"></i>
                         </div>
-                        <label class="tem">Temperatura (°)</label>
-                        <div class="userTemperatura">
-                            <div class="temperatura">
-                                <input type="range" id="temperature" min="0" max="40" step="1" value="20" oninput="updateTemperature(this.value)">   
-                            </div>
-                            <span id="temperatureValue">20°C</span>
+    
+                        <div class="inputs">
+                            <input type="text" id="telefono" required>
+                            <label>Telefono</label>
+                            <i class="fas fa-phone"></i>
                         </div>
                     </div>
-    
+                    <label class="tem">Temperatura (°)</label>
+                    <div class="userTemperatura">
+                        <div id="temperatura" class="temperatura">
+                            <input value="0" type="range" id="temperature" min="0" max="40" step="1" oninput="updateTemperature(this.value)">   
+                        </div>
+                        <span id="temperatureValue">0°</span>
+                    </div>
                 </div>
 
+            </div>
+            <div class="btnContainer">
                 <button id="btn">Guardar</button>
-                <button style="display: none;" id="actualizar">Actualizar</button>
+            <button style="display: none;" id="actualizar">Actualizar</button>
             </div>
         </form>
     </div>
@@ -124,7 +126,7 @@
                             <div class="icon ">
                                 <i class="fa-solid fa-house-laptop"></i>
                             </div>
-                            <p>Inicio</p>
+                            <p>Agregar</p>
                         </a>
                     </li>
                     <li>
@@ -132,7 +134,7 @@
                             <div class="icon">
                                 <i class="fas fa-users"></i>
                             </div>
-                            <p>Pacientes</p>
+                            <p>Modificar</p>
                         </a>
                     </li>
                     <li>
@@ -140,7 +142,7 @@
                             <div class="icon">
                                 <i class="fas fa-calendar-day"></i>
                             </div>
-                            <p>Citas</p>
+                            <p>Eliminar</p>
                         </a>
                     </li>
                 </ul>
