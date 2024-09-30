@@ -6,7 +6,7 @@ function renderPersonas() {
     lista.innerHTML = '';
     personas.forEach(persona => {
         const fechaNacimiento = new Date(persona.edad);
-        const edadUser = new Date().getFullYear() - fechaNacimiento.getFullYear(); // Calcular edad
+        const edadUser = new Date().getFullYear() - fechaNacimiento.getFullYear();
         
         const elemento = document.createElement('li');
         elemento.classList.add('new-item');
@@ -32,7 +32,7 @@ btn.addEventListener('click', (event) => {
     event.preventDefault();
     const nombre = document.getElementById('nombre').value;
     const sexo = document.getElementById('sexo').value;
-    const edad = document.getElementById('date').value; // La fecha de nacimiento
+    const edad = document.getElementById('date').value; 
     const pais = document.getElementById('span_pais').textContent;
     const dpto = document.getElementById('departamento').value;
     const ciudad = document.getElementById('ciudad').value;
@@ -71,8 +71,7 @@ function openModalEdit() {
             document.getElementsByClassName('overlay')[0].style.display = 'block';
             document.getElementsByClassName('formulario')[0].style.display = 'block';
             document.getElementById('nombre').value = personaArray.nombre;
-            document.getElementById('date').value = personaArray.edad; // Aquí debes usar 'edad' que corresponde a la fecha de nacimiento
-            btn.style.display = 'none';
+            document.getElementById('date').value = personaArray.edad;
             actu.style.display = 'block';
         });
     });
@@ -100,7 +99,7 @@ actu.addEventListener('click', (event) => {
     const telefono = document.getElementById('telefono').value;
     const temperatura = document.getElementById('temperatureValue').textContent;
 
-    personas[indiceA] = { nombre, sexo, edad, pais, dpto, ciudad, telefono, temperatura }; // Actualizar persona
+    personas[indiceA] = { nombre, sexo, edad, pais, dpto, ciudad, telefono, temperatura };
     localStorage.setItem('personas', JSON.stringify(personas));
     renderPersonas();
     limpiarCampos();
@@ -115,7 +114,7 @@ function eliminarRegistro() {
             event.preventDefault();
             const nombrePersona = boton.closest('li').querySelector('.leftcontainer h4').textContent;
             const indice = personas.findIndex(persona => persona.nombre === nombrePersona);
-            if (indice !== -1) { // Solo elimina si se encuentra
+            if (indice !== -1) { 
                 personas.splice(indice, 1);
                 localStorage.setItem('personas', JSON.stringify(personas));
                 renderPersonas();
@@ -124,7 +123,6 @@ function eliminarRegistro() {
     });
 }
 
-// Renderizar la lista al cargar la página
 renderPersonas();
 
 
