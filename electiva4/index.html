@@ -30,8 +30,6 @@
                     <img src="../resorces/FormElectiva4/InputPerson.png" alt="">
                 </div>
 
-
-
                 <div class="inputs-div">
                     <div class="dropdown">
                         <select class="select-sexo" name="Sexo" id="sexo">
@@ -44,7 +42,7 @@
                         </div>
                     </div>
                     <div class="inputs">
-                        <input type="date"  id="date" placeholder="Cumpleaños">
+                        <input type="date" id="date" placeholder="Cumpleaños" required>
                     </div>
                 </div>
             </div>
@@ -58,7 +56,6 @@
                 </div>
 
                 <div class="location">
-                    
                     <div class="locationCity">
                         <div class="wrapper">
                             <div class="select-btn">
@@ -72,9 +69,7 @@
                                     <input type="text" id="search" spellcheck="false" placeholder="Buscar">
                                     <i class="fas fa-search"></i>
                                 </div>
-                                <ul id="op" class="options">
-                                    
-                                </ul>
+                                <ul id="op" class="options"></ul>
                             </div>
                             <div class="inputs">
                                 <input type="text" id="departamento" required>
@@ -82,8 +77,6 @@
                                 <i class="fas fa-city"></i>
                             </div>
                         </div>
-    
-                        
                     </div>
 
                     <div class="locationContact">
@@ -92,7 +85,6 @@
                             <label>Ciudad</label>
                             <i class="fas fa-city"></i>
                         </div>
-    
                         <div class="inputs">
                             <input type="text" id="telefono" required>
                             <label>Telefono</label>
@@ -107,23 +99,21 @@
                         <span id="temperatureValue">0°</span>
                     </div>
                 </div>
-
             </div>
             <div class="btnContainer">
                 <button id="btn">Guardar</button>
-            <button style="display: none;" id="actualizar">Actualizar</button>
+                <button style="display: none;" id="actualizar">Actualizar</button>
             </div>
         </form>
     </div>
 
     <main class="main">
-
         <div class="menu">
             <div class="menu-list">
                 <ul>
                     <li class="active">
                         <a href="#">
-                            <div class="icon ">
+                            <div class="icon">
                                 <i class="fa-solid fa-house-laptop"></i>
                             </div>
                             <p>Agregar</p>
@@ -149,21 +139,17 @@
             </div>
         </div>
 
-
         <div class="principal">
             <div class="header">
                 <h3>Personal</h3>
                 <button id="btn-agregar">Agregar</button>
             </div>
-            <ul id="listas">
-
-
-            </ul>
-
+            <ul id="listas"></ul>
         </div>
     </main>
     <script src="index.js"></script>
-    <script src="contry.js"> </script>
+    <script src="contry.js"></script>
 </body>
+
 
 </html>
