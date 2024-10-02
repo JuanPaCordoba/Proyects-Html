@@ -83,6 +83,12 @@ body{
     cursor: pointer;
 }
 
+.active-icon i#editar{
+   display: none;
+}
+
+
+
 .rigthcontainer i:hover{
     color: rgb(116, 104, 245);
 }
@@ -617,4 +623,15 @@ body{
     width: 290px;
     border-radius: 50px;
     padding: 0 10px;
+}
+
+.headerRigth {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#input{
+    padding: 5px;
+    margin-right: 15px;
 }

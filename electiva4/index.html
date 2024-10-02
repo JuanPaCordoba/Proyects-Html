@@ -111,7 +111,7 @@
         <div class="menu">
             <div class="menu-list">
                 <ul>
-                    <li class="active">
+                    <li id="add" class="active">
                         <a href="#">
                             <div class="icon">
                                 <i class="fa-solid fa-house-laptop"></i>
@@ -119,7 +119,7 @@
                             <p>Agregar</p>
                         </a>
                     </li>
-                    <li>
+                    <li id="edit">
                         <a href="#">
                             <div class="icon">
                                 <i class="fas fa-users"></i>
@@ -127,7 +127,7 @@
                             <p>Modificar</p>
                         </a>
                     </li>
-                    <li>
+                    <li id="remove">
                         <a href="#">
                             <div class="icon">
                                 <i class="fas fa-calendar-day"></i>
@@ -138,14 +138,19 @@
                 </ul>
             </div>
         </div>
-
         <div class="principal">
             <div class="header">
                 <h3>Personal</h3>
+                <div class="headerRigth">
+                <input  id="input" style="display: none;" type="text">
                 <button id="btn-agregar">Agregar</button>
+                <button style="display: none;" id="filtro" class="btnEdit">Buscar</button>
+                </div>
             </div>
             <ul id="listas"></ul>
         </div>
+        
+        
     </main>
     <script src="index.js"></script>
     <script src="contry.js"></script>

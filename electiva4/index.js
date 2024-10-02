@@ -1,10 +1,21 @@
 let personas = JSON.parse(localStorage.getItem('personas')) || [];
 
 const lista = document.getElementById('listas');
+const input = document.getElementById('input');
 
-function renderPersonas() {
+function renderPersonasPorNombre(personaName) {
+    let filtrados;
+
+    // Si el input está vacío, mostramos todas las personas
+    if (personaName === '') {
+        filtrados = personas;
+    } else {
+        // Filtramos según el nombre
+        filtrados = personas.filter(persona => persona.nombre.toLowerCase().includes(personaName.toLowerCase()));
+    }
+
     lista.innerHTML = '';
-    personas.forEach(persona => {
+    filtrados.forEach(persona => {
         const fechaNacimiento = new Date(persona.edad);
         const edadUser = new Date().getFullYear() - fechaNacimiento.getFullYear();
         
@@ -23,6 +34,21 @@ function renderPersonas() {
         openModalEdit();
         eliminarRegistro();
     });
+}
+
+let value = '';
+const filtro = document.getElementById('filtro');
+
+input.addEventListener('input', () => {
+    value = input.value;
+    console.log(value);
+    renderPersonasPorNombre(value);
+})
+
+function filtrarPersonas(personaName) {
+    const filtrados = personas.filter(persona => persona.nombre === personaName);
+    console.log(filtrados);
+
 }
 
 const btn = document.getElementById('btn');
@@ -44,7 +70,7 @@ btn.addEventListener('click', (event) => {
     } else {
         personas.unshift({ nombre, sexo, edad, pais, dpto, ciudad, telefono, temperatura });
         localStorage.setItem('personas', JSON.stringify(personas));
-        renderPersonas();
+        renderPersonasPorNombre('');
         document.getElementsByClassName('overlay')[0].style.display = 'none';
         document.getElementsByClassName('formulario')[0].style.display = 'none';
         limpiarCampos();
@@ -101,7 +127,7 @@ actu.addEventListener('click', (event) => {
 
     personas[indiceA] = { nombre, sexo, edad, pais, dpto, ciudad, telefono, temperatura };
     localStorage.setItem('personas', JSON.stringify(personas));
-    renderPersonas();
+    renderPersonasPorNombre('');
     limpiarCampos();
     actu.style.display = 'none';
     btn.style.display = 'block';
@@ -117,13 +143,86 @@ function eliminarRegistro() {
             if (indice !== -1) { 
                 personas.splice(indice, 1);
                 localStorage.setItem('personas', JSON.stringify(personas));
-                renderPersonas();
+                renderPersonasPorNombre('');
             }
         });
     });
 }
 
-renderPersonas();
+const elemetosHover = document.querySelectorAll('.menu-list ul li');
+elemetosHover.forEach((elemento) => {
+    elemento.addEventListener('click', (event) => {
+        elemetosHover.forEach((elemento) => {
+            elemento.classList.remove('active');
+        });
+        event.currentTarget.classList.add('active');
+    })
+});
+
+
+const editarMenu = document.getElementById('edit');
+const remove = document.getElementById('remove');
+const addbutton = document.getElementById('btn-agregar');
+const editarBtn = document.getElementById('filtro');
+const removebtn = document.getElementById('removebtn');
+const add = document.getElementById('add');
+const noBtn = document.querySelectorAll('.editar');
+
+add.addEventListener('click', (event) => {
+    addbutton.style.display = 'block';
+    editarBtn.style.display = 'none';
+    input.style.display = 'none';
+    const botonesEditar = document.querySelectorAll('.editar');
+    botonesEditar.forEach((boton) => {
+    boton.style.display = 'block'
+    }
+    
+);
+const botonesEliminar = document.querySelectorAll('.delete');
+botonesEliminar.forEach((boton) => {
+    boton.style.display = 'block'
+    }
+);
+})
+
+editarMenu.addEventListener('click', (event) => {
+    addbutton.style.display = 'none';
+    editarBtn.style.display = 'block';
+    input.style.display = 'block';
+    const botonesEditar = document.querySelectorAll('.editar');
+    botonesEditar.forEach((boton) => {
+    boton.style.display = 'block'
+    }
+);
+const botonesEliminar = document.querySelectorAll('.delete');
+botonesEliminar.forEach((boton) => {
+    boton.style.display = 'none'
+    }
+);
+})
+
+remove.addEventListener('click', (event) => {
+    addbutton.style.display = 'none';
+    editarBtn.style.display = 'block';
+    input.style.display = 'block';
+    const botonesEditar = document.querySelectorAll('.editar');
+    botonesEditar.forEach((boton) => {
+    boton.style.display = 'none'
+    }
+    
+);
+const botonesEliminar = document.querySelectorAll('.delete');
+botonesEliminar.forEach((boton) => {
+    boton.style.display = 'block'
+    }
+);
+
+
+})
+
+renderPersonasPorNombre('');
+
+
 
 
 
