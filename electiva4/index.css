@@ -83,12 +83,6 @@ body{
     cursor: pointer;
 }
 
-.active-icon i#editar{
-   display: none;
-}
-
-
-
 .rigthcontainer i:hover{
     color: rgb(116, 104, 245);
 }
@@ -110,8 +104,9 @@ body{
     border-radius: 15px;
     border: 3px solid #abd1ed;
     display: none;
-
 }
+
+
 
 .formulario form{
     width: 100%;
@@ -235,6 +230,29 @@ body{
     width: 100%;
     padding: 20px 20px 0 20px;
 }
+
+.formdata .closeContainer{
+    position: fixed;
+    width: 22px;
+    height: 22px;
+    top: 0;
+    left: 0;
+    margin: 5px 2px;
+    cursor: pointer;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.formdata .closeContainer:hover{
+
+    background-color: #6398bf;
+    border-radius: 50px;
+    color: #fff;
+}
+
+
 
 .title{
     margin-bottom: 12px;
@@ -550,7 +568,7 @@ body{
 }
 
 .userLocation{
-    height: 280px;
+    height: 265px;
     border: 2px solid #6398bf;
     border-radius: 10px;
     padding: 10px 10px;
@@ -619,7 +637,7 @@ body{
     align-items: center;
     justify-content: space-between;
     background: linear-gradient(70deg, rgba(54, 13, 235, 0.5) 50%, rgba(48, 69, 252, 0.5) 100%); 
-    height: 45px;
+    height: 37px;
     width: 290px;
     border-radius: 50px;
     padding: 0 10px;
@@ -632,6 +650,64 @@ body{
 }
 
 #input{
+    border-radius: 6px;
+    width: 90px;
     padding: 5px;
     margin-right: 15px;
+}
+
+@media screen and (max-width: 450px){
+    .formulario{
+        width: 300px;
+    }
+
+    .select-sexo{
+        width: 115px;
+        font-size: 14px;
+    }
+    .inputs-div{
+        width: 250px;
+    }
+    .formulario form .inputs img {
+        right: 40px;
+    }
+    .inputs input#date{
+        width: 120px;
+        font-size: 14px;
+        padding: 0 5px;
+    }
+    .wrapper{
+        width: 250px;
+    }
+    .location .inputs input#departamento{
+        width: 120px;
+    }
+    .select-btn {
+        width: 120px;
+    }
+    .formulario form .inputs label{
+        font-size: 13px;
+    }
+    .locationContact{
+        width: 250px;
+    }
+    .inputs input#ciudad{
+        width: 120px;
+    }
+    .inputs input#telefono{
+        width: 120px;
+    }
+    #temperatureValue {
+        width: 80px;
+    }
+    .wrapper span {
+        font-size: 13px;
+    }
+    .rigthcontainer h3{
+        font-size: 13px;
+    }
+    .leftcontainer h4{
+        font-size: 13px;
+    }
+    
 }

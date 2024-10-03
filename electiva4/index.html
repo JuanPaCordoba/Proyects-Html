@@ -15,7 +15,11 @@
 
     <div class="formulario">
         <form>
+
             <div class="formdata">
+                <div class="closeContainer">
+                    <span id="close-btn" class="close">x</span>
+                </div>
                 <div class="title">
                     <div class="personTitle">
                         <img src="../resorces/FormElectiva4/user (1).png" alt="">
@@ -25,7 +29,7 @@
                 </div>
 
                 <div class="inputs">
-                    <input type="text" id="nombre" required>
+                    <input minlength="5" maxlength="25" type="text" id="nombre" required >
                     <label>Ingrese su nombre</label>
                     <img src="../resorces/FormElectiva4/InputPerson.png" alt="">
                 </div>
@@ -72,8 +76,8 @@
                                 <ul id="op" class="options"></ul>
                             </div>
                             <div class="inputs">
-                                <input type="text" id="departamento" required>
-                                <label>Departamento</label>
+                                <input minlength="5" maxlength="10" type="text" id="departamento" required>
+                                <label>Municipio</label>
                                 <i class="fas fa-city"></i>
                             </div>
                         </div>
@@ -81,12 +85,12 @@
 
                     <div class="locationContact">
                         <div class="inputs">
-                            <input type="text" id="ciudad" required>
+                            <input minlength="5" maxlength="10" type="text" id="ciudad" required>
                             <label>Ciudad</label>
                             <i class="fas fa-city"></i>
                         </div>
                         <div class="inputs">
-                            <input type="text" id="telefono" required>
+                            <input minlength="7" maxlength="10" type="text" id="telefono" required>
                             <label>Telefono</label>
                             <i class="fas fa-phone"></i>
                         </div>
@@ -152,8 +156,10 @@
         
         
     </main>
+    <script  src="contry.js"></script>
     <script src="index.js"></script>
-    <script src="contry.js"></script>
+    <script src="validar.js"></script>
+
 </body>
 
 
