@@ -643,6 +643,22 @@ body{
     padding: 0 10px;
 }
 
+.tem{
+    color: #6398bf;
+    font-weight: bold;
+}
+.containerTemp{
+    padding: 5px;
+    color: #337aad;
+    font-weight: bold;
+    background-color: #abd1ed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    border-radius: 5px;
+}
+
 .headerRigth {
     display: flex;
     align-items: center;
@@ -708,6 +724,11 @@ body{
     }
     .leftcontainer h4{
         font-size: 13px;
+    }
+    .containerTemp{
+        margin-left: 5px;
+        font-size: 13px;
+        width: 40px;
     }
     
 }
